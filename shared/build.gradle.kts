@@ -29,6 +29,8 @@ kotlin {
                 implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 
+                // Decompose
+                implementation("com.arkivanov.decompose:decompose:1.0.0")
             }
         }
         val commonTest by getting {
@@ -68,10 +70,10 @@ kotlin {
 
 android {
     namespace = "com.fededri.kmmpoc"
-    compileSdk = 32
+    compileSdk = 33
     defaultConfig {
         minSdk = 29
-        targetSdk = 32
+        targetSdk = 33
     }
 }
 
