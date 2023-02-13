@@ -2,11 +2,18 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
+    @State
+    private var rootComponentHolder = ComponentHolder { context in
+        TodoRootComponent(componentContext: context)
+    }
     
-    @ObservedObject private(set) var viewModel: ViewModel
-
 	var body: some View {
-        Text(viewModel.text)
+        RootView(rootComponentHolder.component)
+            .onAppear { rootComponentHolder.lifecycle.onResume() }
+            .onDisappear {
+                rootComponentHolder.lifecycle.onPause()
+                rootComponentHolder.lifecycle.onStop()
+            }
 	}
 }
 

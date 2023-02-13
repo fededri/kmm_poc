@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     kotlin("plugin.serialization") version "1.8.10"
+    id("kotlin-parcelize")
 }
 
 val ktorVersion = "2.2.1"
@@ -30,7 +31,7 @@ kotlin {
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 
                 // Decompose
-                implementation("com.arkivanov.decompose:decompose:1.0.0")
+                api("com.arkivanov.decompose:decompose:1.0.0")
             }
         }
         val commonTest by getting {

@@ -8,32 +8,23 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.fededri.kmmpoc.Greeting
-
-import androidx.compose.runtime.*
-import kotlinx.coroutines.launch
+import com.arkivanov.decompose.defaultComponentContext
+import com.fededri.kmmpoc.android.todoList.TodoRootContent
+import com.fededri.kmmpoc.todoList.TodoRootComponent
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val root = TodoRootComponent(componentContext = defaultComponentContext())
+
         setContent {
             MyApplicationTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    val scope = rememberCoroutineScope()
-                    var text by remember { mutableStateOf("Loading") }
-                    LaunchedEffect(true) {
-                        scope.launch {
-                            text = try {
-                                Greeting().greeting()
-                            } catch (e: Exception) {
-                                e.localizedMessage ?: "error"
-                            }
-                        }
-                    }
-                    GreetingView(text)
+                   TodoRootContent(component = root)
                 }
             }
         }

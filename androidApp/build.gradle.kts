@@ -17,7 +17,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.3.2"
+        kotlinCompilerExtensionVersion = "1.4.1"
     }
     packagingOptions {
         resources {
@@ -41,4 +41,7 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:1.3.1")
     implementation("androidx.compose.material:material:1.3.1")
     implementation("androidx.activity:activity-compose:1.6.1")
+
+    // Decompose extensions
+    implementation("com.arkivanov.decompose:extensions-compose-jetpack:1.0.0")
 }
