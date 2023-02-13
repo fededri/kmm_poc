@@ -1,7 +1,6 @@
 package com.fededri.kmmpoc.todoList
 
 import com.arkivanov.decompose.ComponentContext
-import com.arkivanov.essenty.lifecycle.LifecycleRegistry
 
 class TodoDetailsComponent(
     componentContext: ComponentContext,
@@ -10,7 +9,6 @@ class TodoDetailsComponent(
 ) : ComponentContext by componentContext {
 
     fun onBackClicked() {
-        LifecycleRegistry()
         onFinished()
     }
 }
