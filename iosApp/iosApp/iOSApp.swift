@@ -4,7 +4,7 @@ import shared
 struct iOSApp: App {
 	var body: some Scene {
 		WindowGroup {
-            ContentView()
+            RootMasterDetail()
 		}
 	}
 }

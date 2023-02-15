@@ -16,19 +16,3 @@ struct ContentView: View {
             }
 	}
 }
-
-
-extension ContentView {
-    class ViewModel: ObservableObject {
-        @Published var text = "Loading..."
-        init() {
-            Greeting().greeting { value, error in
-                DispatchQueue.main.async {
-                    if let value = value {
-                        self.text = value
-                    }
-                }
-            }
-        }
-    }
-}

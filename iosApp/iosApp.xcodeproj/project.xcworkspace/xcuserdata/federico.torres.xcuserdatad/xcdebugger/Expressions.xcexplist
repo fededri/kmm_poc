@@ -3,16 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #2 in closure #1 in closure #1 in TodoListView.body.getter:TodoListView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "newTodo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in closure #1 in closure #1 in closure #1 in TodoListView.body.getter:TodoListView.swift">
       </ContextState>
       <ContextState
          contextName = "closure #2 in closure #1 in closure #1 in TodoListView.body.getter:TodoListView.swift">
       </ContextState>
       <ContextState
-         contextName = "closure #1 in closure #2 in closure #1 in closure #1 in TodoListView.body.getter:TodoListView.swift">
+         contextName = "closure #1 in MultiPaneView.body.getter:MasterDetailView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "newTodo">
+               value = "details.component.model.value.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
